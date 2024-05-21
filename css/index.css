@@ -1,0 +1,51 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Gill Sans", sans-serif;
+}
+.container{
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-image: url('/img/undraw_medicine_b-1-ol.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container-holder{
+    padding: 50px;
+    border: 1px solid #6C63FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px #6C63FF;
+    /* background-color: #6C63FF; */
+    /* backdrop-filter: brightness(1.5); */
+    /* -webkit-backdrop-filter: blur(5px); */
+}
+/* .container h1{
+    color: #fff;
+    text-shadow: 0px 0px 5px ;
+} */
+.container p{
+    font-size: 1.2rem;
+    /* color: #fff; */
+}
+.container a{
+    padding: 10px;
+    color: #6C63FF;
+    text-decoration: none;
+    transition: linear 0.5s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+.container a:hover{
+    border-bottom: 1px solid #6C63FF;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Information System : Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="mainContent">
+            <form action="" class="form" id="patientForm">
+                <h2>Welcome</h2>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label class="form-label" for="firstName">First Name</label> <span>*</span>
+                        <input class="form-control" type="text" name="firstName" id="firstName" required>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="form-label" for="middleName">Middle Name</label><span>*</span>
+                        <input class="form-control" type="text" name="middleName" id="middleName" required>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="form-label" for="lastName">Last Name</label><span>*</span>
+                        <input class="form-control" type="text" name="lastName" id="lastName" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label" for="address">Address</label><span>*</span>
+                        <input class="form-control" type="text" name="address" id="address" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label class="form-label" for="birthdate">Birth Date</label><span>*</span>
+                        <input class="form-control" type="date" name="birthdate" id="birthdate" required>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="form-label" for="phoneNumber">Phone Number</label><span>*</span>
+                        <input class="form-control" type="number" name="phoneNumber" id="phoneNumber" required>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="form-label" for="gender">Gender</label><span class="fmale">*</span><br>
+                        <input type="radio" name="gender" id="gender" value="male"> <label>Male</label>
+                        <input type="radio" name="gender" id="gender" value="female"> <label >Female</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label class="form-label" for="history">Medical History <span>*</span></label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="checkbox" class="checkbox" name="asthma" id="asthma" value="Asthma">
+                        <label class="form-label" for="asthma">Asthma</label><br>
+
+                        <input type="checkbox"  class="checkbox" name="cancer" id="cancer" value="Cancer">
+                        <label class="form-label" for="cancer">Cancer</label><br>
+
+                        <input type="checkbox"  class="checkbox" name="cardiacDisease" id="cardiacDisease" value="Cardiac Disease">
+                        <label class="form-label" for="cardiacDisease">Cardiac Disease</label><br>
+
+                        <input type="checkbox"  class="checkbox" name="diabetes" id="diabetes" value="Diabetes">
+                        <label class="form-label" for="diabetes">Diabetes</label><br>
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="checkbox"  class="checkbox" name="hypertension" id="hypertension" value="Hypertension">
+                        <label class="form-label" for="hypertension">Hypertension</label><br>
+
+                        <input type="checkbox"  class="checkbox" name="psychiatricDisorder" id="psychiatricDisorder" value="Psychiatric">
+                        <label class="form-label" for="psychiatricDisorder">Psychiatric Disorder</label><br>
+
+                        <input type="checkbox"  class="checkbox" name="epilepsi" id="epilepsi" value="Epilepsi">
+                        <label class="form-label" for="epilepsi">Epilepsi</label><br>
+
+                        <input type="checkbox"  class="checkbox" name="others" id="others" value="Others" onclick="enableOthers()">
+                        <label class="form-label" for="others">Others</label><br>
+                        <input class="form-control" type="text" name="others" id="inputOthers" disabled>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <label class="form-label" for="currentSymptoms">Current Symptoms </label> <span>*</span>
+                        <select class="form-control" name="symptoms" id="symptoms">
+                            <option value="">Please select symptoms</option>
+                            <option value="Chest Pain">Chest Pain</option>
+                            <option value="Respiratory">Respiratory</option>
+                            <option value="Hematological">Hematological</option>
+                            <option value="Lympathic">Lympathic</option>
+                            <option value="Neurological">Neurological</option>
+                        </select>
+                    </div>
+                    <div class="col-6 mt-2">
+                        <label for="medication">Are you taking medications? <span class="yesNo">*</span></label>
+                        <input type="radio" name="medication" id="medication" onclick="medEnable()" value="Yes"><label for="yes">Yes</label>
+                        <input type="radio" name="medication" id="medication" onclick="medDisable()" value="No"><label for="no">No</label>
+                        <input class="form-control" type="text" name="medicationText" id="medicationText" disabled>
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col-lg-6">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-success">Reset</button>
+                    </div>
+                </div>
+            
+            </form>
+        </div>
+        </div>
+    </div>
+
+    <script type="text/Javascript" src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
